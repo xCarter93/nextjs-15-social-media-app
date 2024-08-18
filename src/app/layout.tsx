@@ -1,3 +1,5 @@
+import GlassProvider from "glass-js";
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -27,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <GlassProvider>{children}</GlassProvider>
       </body>
     </html>
   );
